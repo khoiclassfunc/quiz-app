@@ -1,0 +1,114 @@
+@import "./table";
+
+.page-login {
+  @include flex(center, center);
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+
+  &.btn {
+    color: var(--white);
+  }
+}
+
+.card {
+  &-body {
+    padding-top: 1rem;
+  }
+}
+
+.choose-answer {
+  cursor: pointer;
+  &.active {
+    background-color: var(--blue-300);
+    &.wrong {
+      background-color: var(--red-600);
+      color: var(--white);
+    }
+  }
+  &.wrong {
+    cursor: none;
+    pointer-events: none;
+  }
+  &.correct {
+    background-color: var(--green-600);
+    color: var(--white);
+    cursor: none;
+    pointer-events: none;
+  }
+}
+
+.header {
+  --height: 60px;
+
+  @include flex(center, center);
+  box-shadow: 0 0 10px 0 var(--transparent-black-3);
+
+  &__left {
+    height: var(--height);
+    @include flex(center, flex-start);
+  }
+
+  &__right {
+    height: var(--height);
+    @include flex(center, flex-end);
+  }
+}
+
+.main {
+  height: calc(100vh - 100px);
+  @include flex(center, center);
+  overflow: auto;
+  > * {
+    height: 100%;
+    display: flex;
+  }
+}
+
+.footer {
+  height: calc(40px);
+  @include flex(center, center);
+  background-color: var(--green-100);
+}
+
+.form-question {
+  &__question {
+    margin-bottom: 1rem;
+  }
+
+  &__answer {
+    margin-bottom: 1rem;
+  }
+}
+
+.choose-subjects {
+  .item {
+    &:hover {
+      background-color: var(--green-400);
+    }
+    &.active {
+      background-color: var(--green-600);
+      color: var(--white);
+    }
+    .card-body {
+      padding-top: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.is-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background: var(--transparent-black-3);
+  color: var(--white);
+}

@@ -1,0 +1,76 @@
+@mixin flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin inline-flex($align: center, $justify: center) {
+  display: inline-flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin transition($val, $property: all ease) {
+  transition: #{$property} $val;
+  -webkit-transition: #{$property} $val;
+  -moz-transition: #{$property} $val;
+  -ms-transition: #{$property} $val;
+  -o-transition: #{$property} $val;
+}
+
+@mixin mobile {
+  @media only screen and (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin media($var) {
+  @each $key, $val in $breakpoints {
+    @if $var == $key {
+      @media screen and (min-width: $val) {
+        @content;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    background-position-y: -5px;
+  }
+  50% {
+    background-position-y: 2px;
+  }
+  to {
+    background-position-y: 0;
+  }
+}
+
+@keyframes radiomark {
+  0% {
+    box-shadow: 0 0 0 2px var(--white) inset, 0 0 0 2px var(--white) inset;
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px var(--white) inset, 0 0 0 6px var(--white) inset;
+  }
+
+  to {
+    box-shadow: 0 0 0 3px var(--white) inset, 0 0 0 3px var(--white) inset;
+  }
+}

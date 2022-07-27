@@ -1,0 +1,54 @@
+.table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+  position: relative;
+  text-align: left;
+  display: table;
+
+  :where(th, td) {
+    white-space: nowrap;
+    padding: 1rem;
+    vertical-align: middle;
+    border: 1px solid var(--gray-500);
+  }
+
+  :where(thead, tfoot) :where(th, td) {
+    --tw-bg-opacity: 1;
+    // background-color: var(--gray-100);
+    border: 1px solid var(--gray-500);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  th:first-child {
+    position: sticky;
+    position: -webkit-sticky;
+    left: 0;
+    z-index: 11;
+  }
+
+  :where(tbody th, tbody td) {
+    --tw-bg-opacity: 1;
+    // background-color: var(--gray-100);
+    border: 1px solid var(--gray-500);
+  }
+
+  &:where(:not(.table-zebra))
+    :where(thead, tbody, tfoot)
+    :where(tr:not(:last-child) :where(th, td)) {
+    border-bottom-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: var(--gray-500);
+  }
+
+  &:where(:not(.table-zebra))
+    :where(thead, tbody, tfoot)
+    :where(tr:not(:last-child) :where(th, td)) {
+    border-bottom-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: var(--gray-500);
+  }
+}

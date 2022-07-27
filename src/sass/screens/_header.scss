@@ -1,0 +1,29 @@
+.menu {
+  padding: 0.5rem 0;
+  &-list {
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+    @include flex(center, center);
+  }
+
+  &-item {
+    list-style: none;
+    a {
+      color: var(--gray-800);
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      display: block;
+      border-radius: 100px;
+      @include transition(300ms);
+      &:hover {
+        background-color: var(--transparent-black-1);
+      }
+
+      &.active {
+        background-color: var(--sky-800);
+        color: var(--white);
+      }
+    }
+  }
+}

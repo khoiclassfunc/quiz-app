@@ -1,0 +1,51 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css";
+
+// Import folder base
+@import "./base/variables";
+@import "./base/base";
+@import "./base/mixin";
+
+// layout
+@import "./layout/container";
+@import "./layout/grid";
+
+// Import folder components
+@import "./components/alert";
+@import "./components/button";
+@import "./components/modal";
+@import "./components/input";
+@import "./components/select";
+@import "./components/textarea";
+@import "./components/accordion";
+@import "./components/tabs";
+@import "./components/card";
+
+// Import folder utilites
+@import "./utilities/utils";
+@import "./utilities/colors";
+@import "./utilities/font";
+@import "./utilities/margin";
+@import "./utilities/text";
+@import "./utilities/display";
+
+// Screens
+@import "./screens/index";
+
+// Custom
+@import "./customs/index";
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}

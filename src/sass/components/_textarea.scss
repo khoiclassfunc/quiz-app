@@ -1,0 +1,100 @@
+.textarea {
+  display: block;
+  width: 100%;
+  padding: var(--padding-textarea);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--gray-900);
+  background-color: var(--white);
+  background-clip: padding-box;
+  border: 1px solid var(--gray-200);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: var(--round-component);
+  @include transition(300ms);
+
+  &:focus {
+    color: var(--gray-900);
+    background-color: var(--white);
+    border-color: var(--blue-300);
+    outline: 0;
+    box-shadow: 0 0 0.3rem 0rem var(--blue-300);
+  }
+
+  @each $val in $colors {
+    &-#{$val} {
+      border-color: var(--#{$val}-300);
+
+      &:focus {
+        border-color: var(--#{$val}-500);
+        box-shadow: 0 0 0.3rem 0rem var(--#{$val}-500);
+      }
+    }
+  }
+
+  @each $key, $val in $untilSizes {
+    &-#{$key} {
+      height: var(--height-component-#{$key});
+      font-size: var(--font-size-#{$key});
+    }
+  }
+
+  &-form {
+    position: relative;
+    @include flex(center, flex-start);
+
+    label {
+      @include flex(center, flex-start);
+      gap: 0.5rem;
+      cursor: pointer;
+      font-size: 90%;
+    }
+
+    > i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      @include flex;
+    }
+    > i:first-child {
+      left: 0.75rem;
+    }
+    > i:last-child {
+      right: 0.75rem;
+    }
+    .icon-left {
+      padding-left: 2.25rem;
+    }
+    .icon-right {
+      padding-right: 2.25rem;
+    }
+  }
+
+  &-disabled,
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.65;
+  }
+
+  &-group {
+    @include flex;
+    > .input-form {
+      flex: 1;
+    }
+    * {
+      border-radius: 0;
+    }
+    > *:first-child,
+    > .input-form:first-child .input {
+      border-top-left-radius: var(--round-component);
+      border-bottom-left-radius: var(--round-component);
+    }
+    > *:last-child,
+    > .input-form:last-child .input {
+      border-top-right-radius: var(--round-component);
+      border-bottom-right-radius: var(--round-component);
+    }
+  }
+}

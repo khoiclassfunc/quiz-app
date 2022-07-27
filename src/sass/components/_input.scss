@@ -1,0 +1,264 @@
+.input {
+  display: block;
+  width: 100%;
+  padding: var(--padding-input);
+  height: var(--height-component);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--gray-900);
+  background-color: var(--white);
+  background-clip: padding-box;
+  border: 1px solid var(--gray-200);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: var(--round-component);
+  @include transition(300ms);
+
+  &:focus {
+    color: var(--gray-900);
+    background-color: var(--white);
+    border-color: var(--blue-300);
+    outline: 0;
+    box-shadow: 0 0 0.3rem 0rem var(--blue-300);
+  }
+
+  @each $val in $colors {
+    &-#{$val} {
+      border-color: var(--#{$val}-300);
+
+      &:focus {
+        border-color: var(--#{$val}-500);
+        box-shadow: 0 0 0.3rem 0rem var(--#{$val}-500);
+      }
+    }
+  }
+
+  @each $key, $val in $untilSizes {
+    &-#{$key} {
+      height: var(--height-component-#{$key});
+      font-size: var(--font-size-#{$key});
+    }
+  }
+
+  &-form {
+    position: relative;
+    @include flex(center, flex-start);
+
+    label {
+      @include flex(center, flex-start);
+      gap: 0.5rem;
+      cursor: pointer;
+      font-size: 90%;
+    }
+
+    > i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      @include flex;
+    }
+    > i:first-child {
+      left: 0.75rem;
+    }
+    > i:last-child {
+      right: 0.75rem;
+    }
+    .icon-left {
+      padding-left: 2.25rem;
+    }
+    .icon-right {
+      padding-right: 2.25rem;
+    }
+  }
+
+  &-disabled,
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.65;
+  }
+
+  &-group {
+    @include flex;
+    > .input-form {
+      flex: 1;
+    }
+    * {
+      border-radius: 0;
+    }
+    > *:first-child,
+    > .input-form:first-child .input {
+      border-top-left-radius: var(--round-component);
+      border-bottom-left-radius: var(--round-component);
+    }
+    > *:last-child,
+    > .input-form:last-child .input {
+      border-top-right-radius: var(--round-component);
+      border-bottom-right-radius: var(--round-component);
+    }
+  }
+}
+
+.checkbox {
+  --check1: var(--gray-900);
+  --check2: var(--white);
+  flex-shrink: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid var(--gray-400);
+  border-radius: var(--round-component);
+  @include transition(300ms, "background-image, border-color");
+  // transition: background-image 300ms;
+
+  &:hover {
+    border-color: var(--check1);
+  }
+
+  &:checked,
+  &[checked="true"] {
+    background-color: var(--check1);
+    border-color: var(--check1);
+    background-repeat: no-repeat;
+    animation: checkmark 0.3s;
+    background-image: linear-gradient(
+        -45deg,
+        transparent 65%,
+        var(--check1) 65.99%
+      ),
+      linear-gradient(45deg, transparent 75%, var(--check1) 75.99%),
+      linear-gradient(-45deg, var(--check1) 40%, transparent 40.99%),
+      linear-gradient(
+        45deg,
+        var(--check1) 30%,
+        var(--check2) 30.99%,
+        var(--check2) 40%,
+        transparent 40.99%
+      ),
+      linear-gradient(-45deg, var(--check2) 50%, var(--check1) 50.99%);
+  }
+
+  @each $val in $colors {
+    &-#{$val} {
+      --check1: var(--#{$val}-500);
+      border-color: var(--#{$val}-300);
+    }
+  }
+}
+
+.toggle {
+  --handleoffset: 1.5rem;
+  flex-shrink: 0;
+  height: 1.5rem;
+  width: 3rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid;
+  border-color: var(--gray-400);
+  background-color: var(--gray-400);
+  @include transition(300ms);
+  border-radius: var(--round-full);
+  box-shadow: calc(var(--handleoffset) * -1) 0 0 2px var(--white) inset,
+    0 0 0 2px var(--white) inset;
+
+  ~ .label {
+    position: relative;
+    user-select: none;
+    display: inline-grid;
+    place-content: center;
+    > * {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+    > .label-on {
+      opacity: 0;
+    }
+    > .label-off {
+      opacity: 1;
+    }
+  }
+
+  &:checked,
+  &[checked="true"] {
+    border-color: var(--gray-800);
+    background-color: var(--gray-800);
+    box-shadow: var(--handleoffset) 0 0 2px var(--white) inset,
+      0 0 0 2px var(--white) inset;
+
+    ~ .label {
+      > .label-on {
+        opacity: 1;
+      }
+      > .label-off {
+        opacity: 0;
+      }
+    }
+  }
+
+  @each $val in $colors {
+    &-#{$val} {
+      border-color: var(--#{$val}-300);
+      background-color: var(--#{$val}-300);
+
+      &:checked,
+      &[checked="true"] {
+        border-color: var(--#{$val}-500);
+        background-color: var(--#{$val}-500);
+      }
+    }
+  }
+
+  @each $key, $val in $untilSizes {
+    &-#{$key} {
+      --handleoffset: #{1.5 * $val}rem;
+      height: #{1.5 * $val}rem;
+      width: #{3 * $val}rem;
+    }
+  }
+}
+
+.radio {
+  --colorRadio: var(--gray-900);
+  flex-shrink: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 9999px;
+  border: 2px solid var(--colorRadio);
+  --tw-border-opacity: 0.2;
+  @include transition(300ms);
+
+  &:hover {
+    border-color: var(--colorRadio);
+  }
+
+  &:checked {
+    background-color: var(--colorRadio);
+    border-color: var(--colorRadio);
+    animation: radiomark 0.3s ease-in-out;
+    box-shadow: 0 0 0 3px var(--white) inset, 0 0 0 3px var(--white) inset;
+  }
+
+  @each $val in $colors {
+    &-#{$val} {
+      --colorRadio: var(--#{$val}-500);
+    }
+  }
+
+  &-group {
+    @include flex(center, flex-start);
+    gap: 1rem;
+
+    &-vertical {
+      @include flex(flex-start, center);
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+}

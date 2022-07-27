@@ -1,0 +1,30 @@
+$containerSizes: (
+  "sm": 540,
+  "md": 720,
+  "lg": 960,
+  "xl": 1140,
+  "xxl": 1320,
+);
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding-left: var(--padding-column);
+  padding-right: var(--padding-column);
+
+  &-fluid {
+    padding-left: var(--padding-column);
+    padding-right: var(--padding-column);
+  }
+
+  @each $key, $val in $containerSizes {
+    &-#{$key} {
+      width: 100%;
+      max-width: #{$val}px;
+      margin: auto;
+      padding-left: var(--padding-column);
+      padding-right: var(--padding-column);
+    }
+  }
+}

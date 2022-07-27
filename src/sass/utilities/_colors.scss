@@ -1,0 +1,58 @@
+@each $color in $colors {
+  .link-#{$color} {
+    color: var(--#{$color}-500);
+    &:hover {
+      color: var(--#{$color}-600);
+    }
+  }
+  .text-#{$color} {
+    color: var(--#{$color}-500);
+  }
+  @each $num in $colorNumbers {
+    .link-#{$color}-#{$num} {
+      color: var(--#{$color}-#{$num});
+      &:hover {
+        @if $num == 50 {
+          color: var(--#{$color}-100);
+        } @else if $num == 900 {
+          color: var(--#{$color}-800);
+        } @else {
+          color: var(--#{$color}-#{100 + $num});
+        }
+      }
+    }
+    .text-#{$color}-#{$num} {
+      color: var(--#{$color}-#{$num});
+    }
+    .bg-#{$color}-#{$num} {
+      background-color: var(--#{$color}-#{$num});
+    }
+    .border-#{$color}-#{$num} {
+      border-color: var(--#{$color}-#{$num});
+    }
+  }
+}
+
+.text-white {
+  color: var(--white);
+}
+.text-black {
+  color: var(--black);
+}
+
+@each $num in $transparentNumbers {
+  .bg-black-#{$num} {
+    background-color: var(--transparent-black-#{$num});
+  }
+  .bg-white-#{$num} {
+    background-color: var(--transparent-white-#{$num});
+  }
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-black {
+  background-color: var(--black);
+}

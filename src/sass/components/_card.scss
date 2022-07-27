@@ -1,0 +1,19 @@
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem 0 var(--transparent-black-3);
+  @include transition(300ms);
+
+  &:hover {
+    box-shadow: 0 0 2rem 0 var(--transparent-black-3);
+  }
+
+  &-body {
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  &-action {
+    @include flex(center, flex-end);
+    margin-top: 1rem;
+  }
+}

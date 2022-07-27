@@ -1,0 +1,44 @@
+.row {
+  @include flex(flex-start, flex-start);
+  flex-wrap: wrap;
+  margin-left: var(--margin-row);
+  margin-right: var(--margin-row);
+
+  > * {
+    padding-left: var(--padding-column);
+    padding-right: var(--padding-column);
+  }
+}
+
+.col {
+  flex: 1;
+  &-0 {
+    flex: 0;
+    width: 0;
+    display: none;
+  }
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      flex: 0 0 calc(100% / (12 / $i));
+      width: calc(100% / (12 / $i));
+      display: block;
+    }
+  }
+
+  @each $key, $val in $breakpoints {
+    @include media($key) {
+      &-#{$key}-0 {
+        flex: 0;
+        width: 0;
+        display: none;
+      }
+      @for $i from 1 through 12 {
+        &-#{$key}-#{$i} {
+          flex: 0 0 calc(100% / (12 / $i));
+          width: calc(100% / (12 / $i));
+          display: block;
+        }
+      }
+    }
+  }
+}

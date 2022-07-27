@@ -1,0 +1,39 @@
+$fontSizes: (
+  "xs": 0.75,
+  "sm": 0.875,
+  "base": 1,
+  "lg": 1.125,
+  "xl": 1.25,
+  "2xl": 1.5,
+  "3xl": 1.875,
+  "4xl": 2.25,
+  "5xl": 3,
+  "6xl": 3.75,
+  "7xl": 4.5,
+  "8xl": 6,
+  "9xl": 8,
+);
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-start {
+  text-align: start;
+}
+.text-end {
+  text-align: end;
+}
+
+@each $key, $val in $fontSizes {
+  .font-#{$key} {
+    font-size: #{$val}rem;
+  }
+}

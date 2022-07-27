@@ -1,0 +1,145 @@
+.tab {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  &-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: -1px;
+
+    &-item {
+      position: relative;
+      display: inline-flex;
+      cursor: pointer;
+      // -webkit-user-select: none;
+      user-select: none;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 2.625rem;
+      font-size: 0.875rem;
+      line-height: 2;
+      font-weight: 600;
+      color: var(--white);
+      background-color: var(--sky-800);
+      border: 1px solid transparent;
+      border-width: 1px 1px 0 1px;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      border-bottom-color: var(--gray-300);
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-top: 1px;
+      @include transition(300ms);
+
+      &:hover {
+        background-color: var(--sky-900);
+      }
+
+      // &:first-child {
+      //   // border-radius: 0.5rem;
+      //   border-bottom-left-radius: 0.6rem;
+      //   &:before {
+      //     background-color: var(--white);
+      //     content: "";
+      //     display: block;
+      //     width: 0.5rem;
+      //     height: 0.5rem;
+      //     position: absolute;
+      //     bottom: 0;
+      //     left: 0;
+      //   }
+      // }
+
+      &.tab-active {
+        border-width: 1px 1px 0px 1px;
+        border-color: var(--gray-300);
+        background-color: var(--white);
+        color: var(--gray-900);
+        // border-width: var(--tab-border, 1px) var(--tab-border, 1px) 0;
+        // border-left-color: var(--tab-border-color);
+        // border-right-color: var(--tab-border-color);
+        // border-top-color: var(--tab-border-color);
+        // padding-left: calc(var(--tab-padding, 1rem) - var(--tab-border, 1px));
+        // padding-right: calc(var(--tab-padding, 1rem) - var(--tab-border, 1px));
+        // padding-bottom: var(--tab-border, 1px);
+        // padding-top: 0;
+
+        // &:before,
+        // &:after {
+        //   z-index: 1;
+        //   content: "";
+        //   display: block;
+        //   position: absolute;
+        //   width: var(--tab-radius, 0.5rem);
+        //   height: var(--tab-radius, 0.5rem);
+        //   bottom: 0;
+        //   --tab-grad: calc(68% - 1px);
+        //   --tab-corner-bg: radial-gradient(
+        //     circle at var(--circle-pos),
+        //     transparent var(--tab-grad),
+        //     var(--tab-border-color) calc(var(--tab-grad) + 0.3px),
+        //     var(--tab-border-color)
+        //       calc(var(--tab-grad) + var(--tab-border, 1px)),
+        //     var(--tab-bg) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.3px)
+        //   );
+        // }
+
+        // &:before {
+        //   left: calc(var(--tab-radius, 0.5rem) * -1);
+        //   --circle-pos: top left;
+        //   background-image: radial-gradient(
+        //     circle at top left,
+        //     transparent calc(68% - 1px),
+        //     var(--gray-900) calc(calc(68% - 1px) + 0.3px),
+        //     var(--gray-900) calc(calc(68% - 1px) + 1px),
+        //     var(--gray-100) calc(calc(68% - 1px) + 1px + 0.3px)
+        //   );
+        // }
+
+        // &:after {
+        //   right: calc(0.5rem * -1);
+        //   background-image: radial-gradient(
+        //     circle at top right,
+        //     transparent calc(68% - 1px),
+        //     var(--gray-900) calc(calc(68% - 1px) + 0.3px),
+        //     var(--gray-900) calc(calc(68% - 1px) + 1px),
+        //     var(--gray-100) calc(calc(68% - 1px) + 1px + 0.3px)
+        //   );
+        // }
+
+        // &:first-child {
+        //   border-bottom-left-radius: 0;
+        //   &:before {
+        //     background: 0 0;
+        //   }
+        // }
+
+        // & + &:before {
+        //   background: 0 0;
+        // }
+      }
+    }
+  }
+
+  &-content {
+    &-item {
+      padding: 1rem;
+      display: none;
+      border: 1px solid var(--gray-300);
+
+      border-radius: 0.5rem;
+      border-top-left-radius: 0rem;
+      // &:first-child {
+      // }
+
+      &.tab-active {
+        display: block;
+      }
+    }
+  }
+}

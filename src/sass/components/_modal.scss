@@ -1,0 +1,71 @@
+.modal {
+  pointer-events: none;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include flex;
+  opacity: 0;
+  z-index: 999;
+  background-color: var(--transparent-black-3);
+  @include transition(200ms);
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+
+  &-toggle {
+    position: fixed;
+    height: 0;
+    width: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    opacity: 0;
+  }
+
+  @each $key, $val in $untilSizes {
+    &-#{$key} &-box {
+      min-width: var(--modal-#{$key});
+    }
+  }
+
+  &-open,
+  &:target,
+  &-toggle:checked + & {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &-box {
+    max-height: calc(100vh - 5em);
+    background-color: var(--white);
+    padding: 1.5rem;
+    @include transition(200ms);
+    width: 32rem;
+    max-width: calc(100% - 1rem);
+    transform: translate(0.9);
+    border-radius: var(--round);
+    box-shadow: 0 25px 50px -12px #00000040;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    z-index: 9999;
+  }
+
+  &-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+    cursor: pointer;
+  }
+
+  &-action {
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+}
