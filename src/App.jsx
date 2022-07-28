@@ -1,7 +1,7 @@
 import "./App.css";
 import { useAuth } from "./firebase/auth";
 import { Layout, Login } from "./pages";
-import "./sass/styles.scss";
+import "./sass/styles.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { FormSubject, Menu, PlayGame, Questions } from "./components";
 import FormQuestion from "./components/Questions/FormQuestion";
