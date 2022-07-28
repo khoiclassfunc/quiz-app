@@ -2,7 +2,7 @@ import "./App.css";
 import { useAuth } from "./firebase/auth";
 import { Layout, Login } from "./pages";
 import "./sass/styles.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import { FormSubject, Menu, PlayGame, Questions } from "./components";
 import FormQuestion from "./components/Questions/FormQuestion";
 
@@ -30,24 +30,26 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        {!currentUser?.email ? (
+      {/* <BrowserRouter> */}
+      <HashRouter>
+        {/* {!currentUser?.email ? (
           <Login />
-        ) : (
-          <Layout>
-            <Routes>
-              {/* <Route path="form-subject">
+        ) : ( */}
+        <Layout>
+          <Routes>
+            {/* <Route path="form-subject">
                 <FormSubject />
               </Route> */}
-              <Route path="/" element={<Menu />} />
-              <Route path="/form-subject" element={<FormSubject />} />
-              <Route path="/form-question" element={<FormQuestion />} />
-              <Route path="/questions" element={<Questions />} />
-              <Route path="/play-game" element={<PlayGame />} />
-            </Routes>
-          </Layout>
-        )}
-      </BrowserRouter>
+            <Route path="/" element={<Menu />} />
+            <Route path="/form-subject" element={<FormSubject />} />
+            <Route path="/form-question" element={<FormQuestion />} />
+            <Route path="/questions" element={<Questions />} />
+            <Route path="/play-game" element={<PlayGame />} />
+          </Routes>
+        </Layout>
+        {/* )} */}
+      </HashRouter>
+      {/* </BrowserRouter> */}
     </div>
   );
 }
