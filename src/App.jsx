@@ -4,7 +4,7 @@ import { FormSubject, Menu, PlayGame, Questions } from "./components";
 import FormQuestion from "./components/Questions/FormQuestion";
 import { useAuth } from "./firebase/auth";
 import { Layout, Login } from "./pages";
-import "./sass/styles.scss";
+import "./sass/styles.css";
 
 function App() {
   const currentUser = useAuth();
