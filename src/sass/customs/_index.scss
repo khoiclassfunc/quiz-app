@@ -5,6 +5,12 @@
   height: 100vh;
 }
 
+.app {
+  background: url(../../assets/imgs/background.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
 a {
   text-decoration: none;
 
@@ -42,6 +48,7 @@ a {
 
 .header {
   --height: 60px;
+  background-color: var(--white);
 
   @include flex(center, center);
   box-shadow: 0 0 10px 0 var(--transparent-black-3);
@@ -111,4 +118,16 @@ a {
   font-size: 50px;
   background: var(--transparent-black-3);
   color: var(--white);
+}
+
+.choose-answer {
+  b {
+    text-transform: uppercase;
+  }
+  span {
+    text-transform: capitalize;
+  }
+  .card-body {
+    gap: 5rem;
+  }
 }

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { getQuestions } from "../../firebase/question";
+import { Link, useNavigate } from "react-router-dom";
+import { deleteQuestion, getQuestions } from "../../firebase/question";
 
 const Questions = () => {
+  const navigate = useNavigate();
   const [listQuestion, setListQuestion] = useState([]);
 
   let indexStt = 1;
@@ -15,14 +16,29 @@ const Questions = () => {
     return unSub();
   }, []);
 
+  const handleEdit = (itemEdit) => {
+    navigate("/form-question", { state: { itemEdit } });
+  };
+
+  const handleDelete = (item) => {
+    if (window.confirm("Are you sure you want to delete this item")) {
+      deleteQuestion(item);
+      let newList = listQuestion.filter((it) => it.id !== item.id);
+      setListQuestion(newList);
+    }
+  };
+
   return (
     <div className="questions">
       <div className="container">
         <div className="row">
           <div className="col-6">
-            <h1>List Questions</h1>
+            <h1 className="text-left">Question List</h1>
           </div>
-          <div className="col-6">
+          <div className="col-6 text-right">
+            <Link to={"/form-subject"} className="btn mr-5">
+              Form Subject
+            </Link>
             <Link to={"/form-question"} className="btn btn-green mt-3">
               <i className="fa-solid fa-plus"></i> Add More Question
             </Link>
@@ -44,10 +60,16 @@ const Questions = () => {
                     <td>{item.questionText}</td>
                     <td>{item.subject.title}</td>
                     <td>
-                      <button className="btn btn-yellow mr-5">
+                      <button
+                        className="btn btn-yellow mr-5"
+                        onClick={() => handleEdit(item)}
+                      >
                         <i className="fa-solid fa-pen-to-square"></i>
                       </button>
-                      <button className="btn btn-red">
+                      <button
+                        className="btn btn-red"
+                        onClick={() => handleDelete(item)}
+                      >
                         <i className="fa-solid fa-pen-to-square"></i>
                       </button>
                     </td>

@@ -22,7 +22,7 @@
       }
     }
     .text-#{$color}-#{$num} {
-      color: var(--#{$color}-#{$num});
+      color: var(--#{$color}-#{$num}) !important;
     }
     .bg-#{$color}-#{$num} {
       background-color: var(--#{$color}-#{$num});
@@ -34,10 +34,10 @@
 }
 
 .text-white {
-  color: var(--white);
+  color: var(--white) !important;
 }
 .text-black {
-  color: var(--black);
+  color: var(--black) !important;
 }
 
 @each $num in $transparentNumbers {

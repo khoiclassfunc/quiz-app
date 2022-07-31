@@ -1,31 +1,32 @@
 import React, { useState } from "react";
-import { googlePopup } from "../firebase/auth";
+import { googlePopup, login, register, useAuth } from "../firebase/auth";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
-  // const [registerInfo, setRegisterInfo] = useState({});
-  // // const [loginEmail, setLoginEmail] = useState("");
-  // // const [loginPassword, setLoginPassword] = useState("");
-  // // const handleOnChangeRegister = (e) => {
-  // //   const name = e.target.name;
-  // //   const value = e.target.value;
+  const [registerInfo, setRegisterInfo] = useState({});
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const handleOnChangeRegister = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
 
-  // //   setRegisterInfo({ ...registerInfo, [name]: value });
-  // // };
+    setRegisterInfo({ ...registerInfo, [name]: value });
+  };
 
-  // // console.log({ registerInfo });
+  const currentUser = useAuth();
+  console.log({ registerInfo });
 
-  // // const handleRegister = async () => {
-  // //   setLoading(true);
-  // //   await register(registerInfo);
-  // //   setLoading(false);
-  // // };
+  const handleRegister = async () => {
+    setLoading(true);
+    await register(registerInfo);
+    setLoading(false);
+  };
 
-  // // const handleLogin = async () => {
-  // //   setLoading(true);
-  // //   await login(loginEmail, loginPassword);
-  // //   setLoading(false);
-  // // };
+  const handleLogin = async () => {
+    setLoading(true);
+    await login(loginEmail, loginPassword);
+    setLoading(false);
+  };
 
   const handleLoginGoogle = async () => {
     setLoading(true);
@@ -35,8 +36,8 @@ const Login = () => {
 
   return (
     <div className="container">
-      <div className="row">
-        {/* <div className="col-12 col-md-6">
+      <div className="row page-login">
+        <div className="col-12 col-md-6">
           <div className="card mt-10">
             <div className="card-body">
               <h3> Register User </h3>
@@ -90,8 +91,8 @@ const Login = () => {
               </button>
             </div>
           </div>
-        </div> */}
-        <div className="col-12">
+        </div>
+        {/* <div className="col-12">
           <div className="page-login">
             <button
               className={`btn btn-blue ${loading && `btn-loading`}`}
@@ -101,7 +102,7 @@ const Login = () => {
               Login with Google
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

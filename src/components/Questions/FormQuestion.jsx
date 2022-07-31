@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { checkStt } from "../../common";
-import { createQuestion } from "../../firebase/question";
+import { createQuestion, updateQuestion } from "../../firebase/question";
 import { getSubjects } from "../../firebase/subject";
 
-const FormQuestion = () => {
+const FormQuestion = (props) => {
+  const { state } = useLocation();
+  console.log(state);
   const navigate = useNavigate();
   const [subjects, setSubjects] = useState([]);
 
@@ -12,6 +14,8 @@ const FormQuestion = () => {
   const [correctAnswer, setCorrectAnswer] = useState(-1);
   const [answers, setAnswers] = useState(["", "", "", ""]);
   const [queSubject, setQueSubject] = useState("");
+  const [itemEditId, setItemEditId] = useState("");
+  const [description, setDescription] = useState("");
 
   useEffect(() => {
     const unSub = async () => {
@@ -24,30 +28,28 @@ const FormQuestion = () => {
   }, []);
 
   useEffect(() => {
-    // const unSub = async () => {
-    //   const questionsRef = collection(db, "questions");
-    //   const q = query(
-    //     questionsRef,
-    //     // where("__name__", "in", [
-    //     //   "j4hkCc2Zc0xG579Xm9tc",
-    //     //   "HgSswbQRMW74DH3SLiJ4",
-    //     // ])
-    //   );
-    //   const data = await getDocs(q);
-    //   data.forEach((doc) => {
-    //     console.log(doc.id, "=> ", doc.data());
-    //   });
-    // };
-    // return unSub();
-  }, []);
+    const itemEdit = state?.itemEdit;
+    if (itemEdit && itemEdit?.id) {
+      setItemEditId(itemEdit.id);
+      setQuestionText(itemEdit.questionText);
+      setAnswers(itemEdit.answers);
+      setQueSubject(itemEdit.subject.id);
+      const idx = itemEdit.answers.findIndex((it) => it.check === true);
+      setCorrectAnswer(idx);
+      const listAnswer = [];
+      itemEdit.answers.forEach((item, index) => {
+        listAnswer.push(item.text);
+      });
+      setAnswers(listAnswer);
+    }
+  }, [state?.itemEdit]);
 
-  const handleSubmit = () => {
+  console.log(answers);
+
+  const handleSubmit = async () => {
     let newAnswers = [];
-
     if (queSubject === "") return;
-
     if (correctAnswer < 0) return;
-
     if (questionText === "") return;
 
     answers.forEach((item, index) => {
@@ -65,7 +67,16 @@ const FormQuestion = () => {
       subject: subjects[idxSubject],
     };
 
-    createQuestion(question);
+    if (itemEditId !== "") {
+      let data = {
+        ...question,
+        id: itemEditId,
+      };
+      await updateQuestion(data);
+    } else {
+      await createQuestion(question);
+    }
+
     navigate("/questions");
   };
 
@@ -80,6 +91,7 @@ const FormQuestion = () => {
             <select
               className="select"
               onChange={(e) => setQueSubject(e.target.value)}
+              value={queSubject}
             >
               <option value="">-- Choose a Subject --</option>
               {subjects.map((item, index) => (
@@ -108,6 +120,15 @@ const FormQuestion = () => {
               setCorrectAnswer={setCorrectAnswer}
             />
           ))}
+          <div className="col-12">
+            <textarea
+              className="textarea mb-8"
+              onChange={(e) => setDescription(e.target.value)}
+              placeholder="Explain..."
+            >
+              {description}
+            </textarea>
+          </div>
           <div className="col-12 mb-5">
             <div className="form-question__submit">
               <button className="btn btn-green" onClick={handleSubmit}>
@@ -135,6 +156,10 @@ const FormQuestionAnswer = ({
   setCorrectAnswer,
 }) => {
   const [text, setText] = useState("");
+
+  useEffect(() => {
+    setText(answers[stt]);
+  }, [answers, stt]);
 
   const handleChangeText = (txt) => {
     setText(txt);

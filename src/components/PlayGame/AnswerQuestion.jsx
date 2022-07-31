@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { checkStt } from "../../common";
 
 const AnswerQuestion = ({ questions, setSteps }) => {
   const navigate = useNavigate();
@@ -72,7 +73,7 @@ const AnswerQuestion = ({ questions, setSteps }) => {
               <div className="col-12">
                 <div className="card number-question">
                   <div className="card-body">
-                    Question {index + 1}: {item.questionText}
+                    <b>Question {index + 1}:</b> {item.questionText}
                   </div>
                 </div>
               </div>
@@ -89,7 +90,7 @@ const AnswerQuestion = ({ questions, setSteps }) => {
       })}
       {!finished && (
         <div className="col-12">
-          <button className="btn btn-green" onClick={handleFinish}>
+          <button className="btn btn-green mb-10" onClick={handleFinish}>
             Finish
           </button>
         </div>
@@ -143,7 +144,10 @@ const ListAnswer = ({
               } ${finished ? (it.check ? "correct" : "wrong") : ""}`}
               onClick={() => handleClick(it, stt, idx)}
             >
-              <div className="card-body">{it.text}</div>
+              <div className="card-body">
+                <b>{checkStt(idx)}: </b>
+                <span>{it.text}</span>
+              </div>
             </div>
           </div>
         ))}

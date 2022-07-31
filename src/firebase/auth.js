@@ -14,6 +14,13 @@ export const register = async ({ email, password }) => {
   try {
     const user = await createUserWithEmailAndPassword(auth, email, password);
     console.log(user);
+    await createUser({
+      ...user.providerData[0],
+      uid: user.uid,
+      displayName: user.displayName,
+      email: user.email,
+      photoURL: user.photoURL,
+    });
   } catch (error) {
     console.log(error.message);
   }

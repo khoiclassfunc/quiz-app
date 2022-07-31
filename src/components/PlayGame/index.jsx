@@ -24,7 +24,7 @@ const PlayGame = () => {
   };
 
   const handleSubmitSubjects = async () => {
-    const data = await getRandomQuestions(10, chooseSubjects);
+    const data = await getRandomQuestions(numberQuestions, chooseSubjects);
     console.log(data);
     setQuestions(data);
     setSteps(1);
@@ -83,8 +83,12 @@ const PlayGame = () => {
               </div>
             </div>
             <div className="col-12">
-              <button className="btn btn-blue" onClick={handleSubmitSubjects}>
-                Submit subjects
+              <button
+                className="btn btn-blue btn-xl"
+                onClick={handleSubmitSubjects}
+              >
+                <i className="fa-solid fa-play"></i>
+                Play Now
               </button>
             </div>
           </div>

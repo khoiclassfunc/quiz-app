@@ -7,22 +7,8 @@ const Menu = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 mb-5">
-            <Link to={"/"} className="btn">
-              Abx
-            </Link>
-          </div>
-          <div className="col-12 mb-5">
-            <Link to={"/form-subject"} className="btn">
-              Form Subject
-            </Link>
-          </div>
-          <div className="col-12 mb-5">
-            <Link to={"/questions"} className="btn">
-              Questions
-            </Link>
-          </div>
-          <div className="col-12 mb-5">
-            <Link to={"/play-game"} className="btn">
+            <Link to={"/play-game"} className="btn btn-green btn-xl btn-play">
+              <i className="fa-solid fa-play"></i>
               Play game
             </Link>
           </div>

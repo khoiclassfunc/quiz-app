@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { createSubject } from "../firebase/subject";
+import { createSubject } from "../../firebase/subject";
 
 const FormSubject = () => {
   const [subjectText, setSubjectText] = useState("");

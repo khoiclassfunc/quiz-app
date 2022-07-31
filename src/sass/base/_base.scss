@@ -392,9 +392,6 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
   color: var(--gray-600);
-  border: 1px solid var(--gray-200);
-  border-radius: 3px;
-  padding: 3px;
 }
 
 ::placeholder {
