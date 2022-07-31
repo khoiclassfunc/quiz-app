@@ -20,7 +20,6 @@ const FormQuestion = (props) => {
   useEffect(() => {
     const unSub = async () => {
       const data = await getSubjects();
-
       setSubjects(data);
     };
 

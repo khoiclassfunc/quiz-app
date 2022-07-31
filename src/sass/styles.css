@@ -675,9 +675,6 @@ input[type=datetime-local],
 input[type=color],
 textarea {
   color: var(--gray-600);
-  border: 1px solid var(--gray-200);
-  border-radius: 3px;
-  padding: 3px;
 }
 
 ::placeholder {
@@ -4109,7 +4106,7 @@ textarea {
 }
 
 .text-slate-50 {
-  color: var(--slate-50);
+  color: var(--slate-50) !important;
 }
 
 .bg-slate-50 {
@@ -4128,7 +4125,7 @@ textarea {
 }
 
 .text-slate-100 {
-  color: var(--slate-100);
+  color: var(--slate-100) !important;
 }
 
 .bg-slate-100 {
@@ -4147,7 +4144,7 @@ textarea {
 }
 
 .text-slate-200 {
-  color: var(--slate-200);
+  color: var(--slate-200) !important;
 }
 
 .bg-slate-200 {
@@ -4166,7 +4163,7 @@ textarea {
 }
 
 .text-slate-300 {
-  color: var(--slate-300);
+  color: var(--slate-300) !important;
 }
 
 .bg-slate-300 {
@@ -4185,7 +4182,7 @@ textarea {
 }
 
 .text-slate-400 {
-  color: var(--slate-400);
+  color: var(--slate-400) !important;
 }
 
 .bg-slate-400 {
@@ -4204,7 +4201,7 @@ textarea {
 }
 
 .text-slate-500 {
-  color: var(--slate-500);
+  color: var(--slate-500) !important;
 }
 
 .bg-slate-500 {
@@ -4223,7 +4220,7 @@ textarea {
 }
 
 .text-slate-600 {
-  color: var(--slate-600);
+  color: var(--slate-600) !important;
 }
 
 .bg-slate-600 {
@@ -4242,7 +4239,7 @@ textarea {
 }
 
 .text-slate-700 {
-  color: var(--slate-700);
+  color: var(--slate-700) !important;
 }
 
 .bg-slate-700 {
@@ -4261,7 +4258,7 @@ textarea {
 }
 
 .text-slate-800 {
-  color: var(--slate-800);
+  color: var(--slate-800) !important;
 }
 
 .bg-slate-800 {
@@ -4280,7 +4277,7 @@ textarea {
 }
 
 .text-slate-900 {
-  color: var(--slate-900);
+  color: var(--slate-900) !important;
 }
 
 .bg-slate-900 {
@@ -4310,7 +4307,7 @@ textarea {
 }
 
 .text-gray-50 {
-  color: var(--gray-50);
+  color: var(--gray-50) !important;
 }
 
 .bg-gray-50 {
@@ -4329,7 +4326,7 @@ textarea {
 }
 
 .text-gray-100 {
-  color: var(--gray-100);
+  color: var(--gray-100) !important;
 }
 
 .bg-gray-100 {
@@ -4348,7 +4345,7 @@ textarea {
 }
 
 .text-gray-200 {
-  color: var(--gray-200);
+  color: var(--gray-200) !important;
 }
 
 .bg-gray-200 {
@@ -4367,7 +4364,7 @@ textarea {
 }
 
 .text-gray-300 {
-  color: var(--gray-300);
+  color: var(--gray-300) !important;
 }
 
 .bg-gray-300 {
@@ -4386,7 +4383,7 @@ textarea {
 }
 
 .text-gray-400 {
-  color: var(--gray-400);
+  color: var(--gray-400) !important;
 }
 
 .bg-gray-400 {
@@ -4405,7 +4402,7 @@ textarea {
 }
 
 .text-gray-500 {
-  color: var(--gray-500);
+  color: var(--gray-500) !important;
 }
 
 .bg-gray-500 {
@@ -4424,7 +4421,7 @@ textarea {
 }
 
 .text-gray-600 {
-  color: var(--gray-600);
+  color: var(--gray-600) !important;
 }
 
 .bg-gray-600 {
@@ -4443,7 +4440,7 @@ textarea {
 }
 
 .text-gray-700 {
-  color: var(--gray-700);
+  color: var(--gray-700) !important;
 }
 
 .bg-gray-700 {
@@ -4462,7 +4459,7 @@ textarea {
 }
 
 .text-gray-800 {
-  color: var(--gray-800);
+  color: var(--gray-800) !important;
 }
 
 .bg-gray-800 {
@@ -4481,7 +4478,7 @@ textarea {
 }
 
 .text-gray-900 {
-  color: var(--gray-900);
+  color: var(--gray-900) !important;
 }
 
 .bg-gray-900 {
@@ -4511,7 +4508,7 @@ textarea {
 }
 
 .text-zinc-50 {
-  color: var(--zinc-50);
+  color: var(--zinc-50) !important;
 }
 
 .bg-zinc-50 {
@@ -4530,7 +4527,7 @@ textarea {
 }
 
 .text-zinc-100 {
-  color: var(--zinc-100);
+  color: var(--zinc-100) !important;
 }
 
 .bg-zinc-100 {
@@ -4549,7 +4546,7 @@ textarea {
 }
 
 .text-zinc-200 {
-  color: var(--zinc-200);
+  color: var(--zinc-200) !important;
 }
 
 .bg-zinc-200 {
@@ -4568,7 +4565,7 @@ textarea {
 }
 
 .text-zinc-300 {
-  color: var(--zinc-300);
+  color: var(--zinc-300) !important;
 }
 
 .bg-zinc-300 {
@@ -4587,7 +4584,7 @@ textarea {
 }
 
 .text-zinc-400 {
-  color: var(--zinc-400);
+  color: var(--zinc-400) !important;
 }
 
 .bg-zinc-400 {
@@ -4606,7 +4603,7 @@ textarea {
 }
 
 .text-zinc-500 {
-  color: var(--zinc-500);
+  color: var(--zinc-500) !important;
 }
 
 .bg-zinc-500 {
@@ -4625,7 +4622,7 @@ textarea {
 }
 
 .text-zinc-600 {
-  color: var(--zinc-600);
+  color: var(--zinc-600) !important;
 }
 
 .bg-zinc-600 {
@@ -4644,7 +4641,7 @@ textarea {
 }
 
 .text-zinc-700 {
-  color: var(--zinc-700);
+  color: var(--zinc-700) !important;
 }
 
 .bg-zinc-700 {
@@ -4663,7 +4660,7 @@ textarea {
 }
 
 .text-zinc-800 {
-  color: var(--zinc-800);
+  color: var(--zinc-800) !important;
 }
 
 .bg-zinc-800 {
@@ -4682,7 +4679,7 @@ textarea {
 }
 
 .text-zinc-900 {
-  color: var(--zinc-900);
+  color: var(--zinc-900) !important;
 }
 
 .bg-zinc-900 {
@@ -4712,7 +4709,7 @@ textarea {
 }
 
 .text-neutral-50 {
-  color: var(--neutral-50);
+  color: var(--neutral-50) !important;
 }
 
 .bg-neutral-50 {
@@ -4731,7 +4728,7 @@ textarea {
 }
 
 .text-neutral-100 {
-  color: var(--neutral-100);
+  color: var(--neutral-100) !important;
 }
 
 .bg-neutral-100 {
@@ -4750,7 +4747,7 @@ textarea {
 }
 
 .text-neutral-200 {
-  color: var(--neutral-200);
+  color: var(--neutral-200) !important;
 }
 
 .bg-neutral-200 {
@@ -4769,7 +4766,7 @@ textarea {
 }
 
 .text-neutral-300 {
-  color: var(--neutral-300);
+  color: var(--neutral-300) !important;
 }
 
 .bg-neutral-300 {
@@ -4788,7 +4785,7 @@ textarea {
 }
 
 .text-neutral-400 {
-  color: var(--neutral-400);
+  color: var(--neutral-400) !important;
 }
 
 .bg-neutral-400 {
@@ -4807,7 +4804,7 @@ textarea {
 }
 
 .text-neutral-500 {
-  color: var(--neutral-500);
+  color: var(--neutral-500) !important;
 }
 
 .bg-neutral-500 {
@@ -4826,7 +4823,7 @@ textarea {
 }
 
 .text-neutral-600 {
-  color: var(--neutral-600);
+  color: var(--neutral-600) !important;
 }
 
 .bg-neutral-600 {
@@ -4845,7 +4842,7 @@ textarea {
 }
 
 .text-neutral-700 {
-  color: var(--neutral-700);
+  color: var(--neutral-700) !important;
 }
 
 .bg-neutral-700 {
@@ -4864,7 +4861,7 @@ textarea {
 }
 
 .text-neutral-800 {
-  color: var(--neutral-800);
+  color: var(--neutral-800) !important;
 }
 
 .bg-neutral-800 {
@@ -4883,7 +4880,7 @@ textarea {
 }
 
 .text-neutral-900 {
-  color: var(--neutral-900);
+  color: var(--neutral-900) !important;
 }
 
 .bg-neutral-900 {
@@ -4913,7 +4910,7 @@ textarea {
 }
 
 .text-stone-50 {
-  color: var(--stone-50);
+  color: var(--stone-50) !important;
 }
 
 .bg-stone-50 {
@@ -4932,7 +4929,7 @@ textarea {
 }
 
 .text-stone-100 {
-  color: var(--stone-100);
+  color: var(--stone-100) !important;
 }
 
 .bg-stone-100 {
@@ -4951,7 +4948,7 @@ textarea {
 }
 
 .text-stone-200 {
-  color: var(--stone-200);
+  color: var(--stone-200) !important;
 }
 
 .bg-stone-200 {
@@ -4970,7 +4967,7 @@ textarea {
 }
 
 .text-stone-300 {
-  color: var(--stone-300);
+  color: var(--stone-300) !important;
 }
 
 .bg-stone-300 {
@@ -4989,7 +4986,7 @@ textarea {
 }
 
 .text-stone-400 {
-  color: var(--stone-400);
+  color: var(--stone-400) !important;
 }
 
 .bg-stone-400 {
@@ -5008,7 +5005,7 @@ textarea {
 }
 
 .text-stone-500 {
-  color: var(--stone-500);
+  color: var(--stone-500) !important;
 }
 
 .bg-stone-500 {
@@ -5027,7 +5024,7 @@ textarea {
 }
 
 .text-stone-600 {
-  color: var(--stone-600);
+  color: var(--stone-600) !important;
 }
 
 .bg-stone-600 {
@@ -5046,7 +5043,7 @@ textarea {
 }
 
 .text-stone-700 {
-  color: var(--stone-700);
+  color: var(--stone-700) !important;
 }
 
 .bg-stone-700 {
@@ -5065,7 +5062,7 @@ textarea {
 }
 
 .text-stone-800 {
-  color: var(--stone-800);
+  color: var(--stone-800) !important;
 }
 
 .bg-stone-800 {
@@ -5084,7 +5081,7 @@ textarea {
 }
 
 .text-stone-900 {
-  color: var(--stone-900);
+  color: var(--stone-900) !important;
 }
 
 .bg-stone-900 {
@@ -5114,7 +5111,7 @@ textarea {
 }
 
 .text-red-50 {
-  color: var(--red-50);
+  color: var(--red-50) !important;
 }
 
 .bg-red-50 {
@@ -5133,7 +5130,7 @@ textarea {
 }
 
 .text-red-100 {
-  color: var(--red-100);
+  color: var(--red-100) !important;
 }
 
 .bg-red-100 {
@@ -5152,7 +5149,7 @@ textarea {
 }
 
 .text-red-200 {
-  color: var(--red-200);
+  color: var(--red-200) !important;
 }
 
 .bg-red-200 {
@@ -5171,7 +5168,7 @@ textarea {
 }
 
 .text-red-300 {
-  color: var(--red-300);
+  color: var(--red-300) !important;
 }
 
 .bg-red-300 {
@@ -5190,7 +5187,7 @@ textarea {
 }
 
 .text-red-400 {
-  color: var(--red-400);
+  color: var(--red-400) !important;
 }
 
 .bg-red-400 {
@@ -5209,7 +5206,7 @@ textarea {
 }
 
 .text-red-500 {
-  color: var(--red-500);
+  color: var(--red-500) !important;
 }
 
 .bg-red-500 {
@@ -5228,7 +5225,7 @@ textarea {
 }
 
 .text-red-600 {
-  color: var(--red-600);
+  color: var(--red-600) !important;
 }
 
 .bg-red-600 {
@@ -5247,7 +5244,7 @@ textarea {
 }
 
 .text-red-700 {
-  color: var(--red-700);
+  color: var(--red-700) !important;
 }
 
 .bg-red-700 {
@@ -5266,7 +5263,7 @@ textarea {
 }
 
 .text-red-800 {
-  color: var(--red-800);
+  color: var(--red-800) !important;
 }
 
 .bg-red-800 {
@@ -5285,7 +5282,7 @@ textarea {
 }
 
 .text-red-900 {
-  color: var(--red-900);
+  color: var(--red-900) !important;
 }
 
 .bg-red-900 {
@@ -5315,7 +5312,7 @@ textarea {
 }
 
 .text-orange-50 {
-  color: var(--orange-50);
+  color: var(--orange-50) !important;
 }
 
 .bg-orange-50 {
@@ -5334,7 +5331,7 @@ textarea {
 }
 
 .text-orange-100 {
-  color: var(--orange-100);
+  color: var(--orange-100) !important;
 }
 
 .bg-orange-100 {
@@ -5353,7 +5350,7 @@ textarea {
 }
 
 .text-orange-200 {
-  color: var(--orange-200);
+  color: var(--orange-200) !important;
 }
 
 .bg-orange-200 {
@@ -5372,7 +5369,7 @@ textarea {
 }
 
 .text-orange-300 {
-  color: var(--orange-300);
+  color: var(--orange-300) !important;
 }
 
 .bg-orange-300 {
@@ -5391,7 +5388,7 @@ textarea {
 }
 
 .text-orange-400 {
-  color: var(--orange-400);
+  color: var(--orange-400) !important;
 }
 
 .bg-orange-400 {
@@ -5410,7 +5407,7 @@ textarea {
 }
 
 .text-orange-500 {
-  color: var(--orange-500);
+  color: var(--orange-500) !important;
 }
 
 .bg-orange-500 {
@@ -5429,7 +5426,7 @@ textarea {
 }
 
 .text-orange-600 {
-  color: var(--orange-600);
+  color: var(--orange-600) !important;
 }
 
 .bg-orange-600 {
@@ -5448,7 +5445,7 @@ textarea {
 }
 
 .text-orange-700 {
-  color: var(--orange-700);
+  color: var(--orange-700) !important;
 }
 
 .bg-orange-700 {
@@ -5467,7 +5464,7 @@ textarea {
 }
 
 .text-orange-800 {
-  color: var(--orange-800);
+  color: var(--orange-800) !important;
 }
 
 .bg-orange-800 {
@@ -5486,7 +5483,7 @@ textarea {
 }
 
 .text-orange-900 {
-  color: var(--orange-900);
+  color: var(--orange-900) !important;
 }
 
 .bg-orange-900 {
@@ -5516,7 +5513,7 @@ textarea {
 }
 
 .text-amber-50 {
-  color: var(--amber-50);
+  color: var(--amber-50) !important;
 }
 
 .bg-amber-50 {
@@ -5535,7 +5532,7 @@ textarea {
 }
 
 .text-amber-100 {
-  color: var(--amber-100);
+  color: var(--amber-100) !important;
 }
 
 .bg-amber-100 {
@@ -5554,7 +5551,7 @@ textarea {
 }
 
 .text-amber-200 {
-  color: var(--amber-200);
+  color: var(--amber-200) !important;
 }
 
 .bg-amber-200 {
@@ -5573,7 +5570,7 @@ textarea {
 }
 
 .text-amber-300 {
-  color: var(--amber-300);
+  color: var(--amber-300) !important;
 }
 
 .bg-amber-300 {
@@ -5592,7 +5589,7 @@ textarea {
 }
 
 .text-amber-400 {
-  color: var(--amber-400);
+  color: var(--amber-400) !important;
 }
 
 .bg-amber-400 {
@@ -5611,7 +5608,7 @@ textarea {
 }
 
 .text-amber-500 {
-  color: var(--amber-500);
+  color: var(--amber-500) !important;
 }
 
 .bg-amber-500 {
@@ -5630,7 +5627,7 @@ textarea {
 }
 
 .text-amber-600 {
-  color: var(--amber-600);
+  color: var(--amber-600) !important;
 }
 
 .bg-amber-600 {
@@ -5649,7 +5646,7 @@ textarea {
 }
 
 .text-amber-700 {
-  color: var(--amber-700);
+  color: var(--amber-700) !important;
 }
 
 .bg-amber-700 {
@@ -5668,7 +5665,7 @@ textarea {
 }
 
 .text-amber-800 {
-  color: var(--amber-800);
+  color: var(--amber-800) !important;
 }
 
 .bg-amber-800 {
@@ -5687,7 +5684,7 @@ textarea {
 }
 
 .text-amber-900 {
-  color: var(--amber-900);
+  color: var(--amber-900) !important;
 }
 
 .bg-amber-900 {
@@ -5717,7 +5714,7 @@ textarea {
 }
 
 .text-yellow-50 {
-  color: var(--yellow-50);
+  color: var(--yellow-50) !important;
 }
 
 .bg-yellow-50 {
@@ -5736,7 +5733,7 @@ textarea {
 }
 
 .text-yellow-100 {
-  color: var(--yellow-100);
+  color: var(--yellow-100) !important;
 }
 
 .bg-yellow-100 {
@@ -5755,7 +5752,7 @@ textarea {
 }
 
 .text-yellow-200 {
-  color: var(--yellow-200);
+  color: var(--yellow-200) !important;
 }
 
 .bg-yellow-200 {
@@ -5774,7 +5771,7 @@ textarea {
 }
 
 .text-yellow-300 {
-  color: var(--yellow-300);
+  color: var(--yellow-300) !important;
 }
 
 .bg-yellow-300 {
@@ -5793,7 +5790,7 @@ textarea {
 }
 
 .text-yellow-400 {
-  color: var(--yellow-400);
+  color: var(--yellow-400) !important;
 }
 
 .bg-yellow-400 {
@@ -5812,7 +5809,7 @@ textarea {
 }
 
 .text-yellow-500 {
-  color: var(--yellow-500);
+  color: var(--yellow-500) !important;
 }
 
 .bg-yellow-500 {
@@ -5831,7 +5828,7 @@ textarea {
 }
 
 .text-yellow-600 {
-  color: var(--yellow-600);
+  color: var(--yellow-600) !important;
 }
 
 .bg-yellow-600 {
@@ -5850,7 +5847,7 @@ textarea {
 }
 
 .text-yellow-700 {
-  color: var(--yellow-700);
+  color: var(--yellow-700) !important;
 }
 
 .bg-yellow-700 {
@@ -5869,7 +5866,7 @@ textarea {
 }
 
 .text-yellow-800 {
-  color: var(--yellow-800);
+  color: var(--yellow-800) !important;
 }
 
 .bg-yellow-800 {
@@ -5888,7 +5885,7 @@ textarea {
 }
 
 .text-yellow-900 {
-  color: var(--yellow-900);
+  color: var(--yellow-900) !important;
 }
 
 .bg-yellow-900 {
@@ -5918,7 +5915,7 @@ textarea {
 }
 
 .text-lime-50 {
-  color: var(--lime-50);
+  color: var(--lime-50) !important;
 }
 
 .bg-lime-50 {
@@ -5937,7 +5934,7 @@ textarea {
 }
 
 .text-lime-100 {
-  color: var(--lime-100);
+  color: var(--lime-100) !important;
 }
 
 .bg-lime-100 {
@@ -5956,7 +5953,7 @@ textarea {
 }
 
 .text-lime-200 {
-  color: var(--lime-200);
+  color: var(--lime-200) !important;
 }
 
 .bg-lime-200 {
@@ -5975,7 +5972,7 @@ textarea {
 }
 
 .text-lime-300 {
-  color: var(--lime-300);
+  color: var(--lime-300) !important;
 }
 
 .bg-lime-300 {
@@ -5994,7 +5991,7 @@ textarea {
 }
 
 .text-lime-400 {
-  color: var(--lime-400);
+  color: var(--lime-400) !important;
 }
 
 .bg-lime-400 {
@@ -6013,7 +6010,7 @@ textarea {
 }
 
 .text-lime-500 {
-  color: var(--lime-500);
+  color: var(--lime-500) !important;
 }
 
 .bg-lime-500 {
@@ -6032,7 +6029,7 @@ textarea {
 }
 
 .text-lime-600 {
-  color: var(--lime-600);
+  color: var(--lime-600) !important;
 }
 
 .bg-lime-600 {
@@ -6051,7 +6048,7 @@ textarea {
 }
 
 .text-lime-700 {
-  color: var(--lime-700);
+  color: var(--lime-700) !important;
 }
 
 .bg-lime-700 {
@@ -6070,7 +6067,7 @@ textarea {
 }
 
 .text-lime-800 {
-  color: var(--lime-800);
+  color: var(--lime-800) !important;
 }
 
 .bg-lime-800 {
@@ -6089,7 +6086,7 @@ textarea {
 }
 
 .text-lime-900 {
-  color: var(--lime-900);
+  color: var(--lime-900) !important;
 }
 
 .bg-lime-900 {
@@ -6119,7 +6116,7 @@ textarea {
 }
 
 .text-green-50 {
-  color: var(--green-50);
+  color: var(--green-50) !important;
 }
 
 .bg-green-50 {
@@ -6138,7 +6135,7 @@ textarea {
 }
 
 .text-green-100 {
-  color: var(--green-100);
+  color: var(--green-100) !important;
 }
 
 .bg-green-100 {
@@ -6157,7 +6154,7 @@ textarea {
 }
 
 .text-green-200 {
-  color: var(--green-200);
+  color: var(--green-200) !important;
 }
 
 .bg-green-200 {
@@ -6176,7 +6173,7 @@ textarea {
 }
 
 .text-green-300 {
-  color: var(--green-300);
+  color: var(--green-300) !important;
 }
 
 .bg-green-300 {
@@ -6195,7 +6192,7 @@ textarea {
 }
 
 .text-green-400 {
-  color: var(--green-400);
+  color: var(--green-400) !important;
 }
 
 .bg-green-400 {
@@ -6214,7 +6211,7 @@ textarea {
 }
 
 .text-green-500 {
-  color: var(--green-500);
+  color: var(--green-500) !important;
 }
 
 .bg-green-500 {
@@ -6233,7 +6230,7 @@ textarea {
 }
 
 .text-green-600 {
-  color: var(--green-600);
+  color: var(--green-600) !important;
 }
 
 .bg-green-600 {
@@ -6252,7 +6249,7 @@ textarea {
 }
 
 .text-green-700 {
-  color: var(--green-700);
+  color: var(--green-700) !important;
 }
 
 .bg-green-700 {
@@ -6271,7 +6268,7 @@ textarea {
 }
 
 .text-green-800 {
-  color: var(--green-800);
+  color: var(--green-800) !important;
 }
 
 .bg-green-800 {
@@ -6290,7 +6287,7 @@ textarea {
 }
 
 .text-green-900 {
-  color: var(--green-900);
+  color: var(--green-900) !important;
 }
 
 .bg-green-900 {
@@ -6320,7 +6317,7 @@ textarea {
 }
 
 .text-emerald-50 {
-  color: var(--emerald-50);
+  color: var(--emerald-50) !important;
 }
 
 .bg-emerald-50 {
@@ -6339,7 +6336,7 @@ textarea {
 }
 
 .text-emerald-100 {
-  color: var(--emerald-100);
+  color: var(--emerald-100) !important;
 }
 
 .bg-emerald-100 {
@@ -6358,7 +6355,7 @@ textarea {
 }
 
 .text-emerald-200 {
-  color: var(--emerald-200);
+  color: var(--emerald-200) !important;
 }
 
 .bg-emerald-200 {
@@ -6377,7 +6374,7 @@ textarea {
 }
 
 .text-emerald-300 {
-  color: var(--emerald-300);
+  color: var(--emerald-300) !important;
 }
 
 .bg-emerald-300 {
@@ -6396,7 +6393,7 @@ textarea {
 }
 
 .text-emerald-400 {
-  color: var(--emerald-400);
+  color: var(--emerald-400) !important;
 }
 
 .bg-emerald-400 {
@@ -6415,7 +6412,7 @@ textarea {
 }
 
 .text-emerald-500 {
-  color: var(--emerald-500);
+  color: var(--emerald-500) !important;
 }
 
 .bg-emerald-500 {
@@ -6434,7 +6431,7 @@ textarea {
 }
 
 .text-emerald-600 {
-  color: var(--emerald-600);
+  color: var(--emerald-600) !important;
 }
 
 .bg-emerald-600 {
@@ -6453,7 +6450,7 @@ textarea {
 }
 
 .text-emerald-700 {
-  color: var(--emerald-700);
+  color: var(--emerald-700) !important;
 }
 
 .bg-emerald-700 {
@@ -6472,7 +6469,7 @@ textarea {
 }
 
 .text-emerald-800 {
-  color: var(--emerald-800);
+  color: var(--emerald-800) !important;
 }
 
 .bg-emerald-800 {
@@ -6491,7 +6488,7 @@ textarea {
 }
 
 .text-emerald-900 {
-  color: var(--emerald-900);
+  color: var(--emerald-900) !important;
 }
 
 .bg-emerald-900 {
@@ -6521,7 +6518,7 @@ textarea {
 }
 
 .text-teal-50 {
-  color: var(--teal-50);
+  color: var(--teal-50) !important;
 }
 
 .bg-teal-50 {
@@ -6540,7 +6537,7 @@ textarea {
 }
 
 .text-teal-100 {
-  color: var(--teal-100);
+  color: var(--teal-100) !important;
 }
 
 .bg-teal-100 {
@@ -6559,7 +6556,7 @@ textarea {
 }
 
 .text-teal-200 {
-  color: var(--teal-200);
+  color: var(--teal-200) !important;
 }
 
 .bg-teal-200 {
@@ -6578,7 +6575,7 @@ textarea {
 }
 
 .text-teal-300 {
-  color: var(--teal-300);
+  color: var(--teal-300) !important;
 }
 
 .bg-teal-300 {
@@ -6597,7 +6594,7 @@ textarea {
 }
 
 .text-teal-400 {
-  color: var(--teal-400);
+  color: var(--teal-400) !important;
 }
 
 .bg-teal-400 {
@@ -6616,7 +6613,7 @@ textarea {
 }
 
 .text-teal-500 {
-  color: var(--teal-500);
+  color: var(--teal-500) !important;
 }
 
 .bg-teal-500 {
@@ -6635,7 +6632,7 @@ textarea {
 }
 
 .text-teal-600 {
-  color: var(--teal-600);
+  color: var(--teal-600) !important;
 }
 
 .bg-teal-600 {
@@ -6654,7 +6651,7 @@ textarea {
 }
 
 .text-teal-700 {
-  color: var(--teal-700);
+  color: var(--teal-700) !important;
 }
 
 .bg-teal-700 {
@@ -6673,7 +6670,7 @@ textarea {
 }
 
 .text-teal-800 {
-  color: var(--teal-800);
+  color: var(--teal-800) !important;
 }
 
 .bg-teal-800 {
@@ -6692,7 +6689,7 @@ textarea {
 }
 
 .text-teal-900 {
-  color: var(--teal-900);
+  color: var(--teal-900) !important;
 }
 
 .bg-teal-900 {
@@ -6722,7 +6719,7 @@ textarea {
 }
 
 .text-cyan-50 {
-  color: var(--cyan-50);
+  color: var(--cyan-50) !important;
 }
 
 .bg-cyan-50 {
@@ -6741,7 +6738,7 @@ textarea {
 }
 
 .text-cyan-100 {
-  color: var(--cyan-100);
+  color: var(--cyan-100) !important;
 }
 
 .bg-cyan-100 {
@@ -6760,7 +6757,7 @@ textarea {
 }
 
 .text-cyan-200 {
-  color: var(--cyan-200);
+  color: var(--cyan-200) !important;
 }
 
 .bg-cyan-200 {
@@ -6779,7 +6776,7 @@ textarea {
 }
 
 .text-cyan-300 {
-  color: var(--cyan-300);
+  color: var(--cyan-300) !important;
 }
 
 .bg-cyan-300 {
@@ -6798,7 +6795,7 @@ textarea {
 }
 
 .text-cyan-400 {
-  color: var(--cyan-400);
+  color: var(--cyan-400) !important;
 }
 
 .bg-cyan-400 {
@@ -6817,7 +6814,7 @@ textarea {
 }
 
 .text-cyan-500 {
-  color: var(--cyan-500);
+  color: var(--cyan-500) !important;
 }
 
 .bg-cyan-500 {
@@ -6836,7 +6833,7 @@ textarea {
 }
 
 .text-cyan-600 {
-  color: var(--cyan-600);
+  color: var(--cyan-600) !important;
 }
 
 .bg-cyan-600 {
@@ -6855,7 +6852,7 @@ textarea {
 }
 
 .text-cyan-700 {
-  color: var(--cyan-700);
+  color: var(--cyan-700) !important;
 }
 
 .bg-cyan-700 {
@@ -6874,7 +6871,7 @@ textarea {
 }
 
 .text-cyan-800 {
-  color: var(--cyan-800);
+  color: var(--cyan-800) !important;
 }
 
 .bg-cyan-800 {
@@ -6893,7 +6890,7 @@ textarea {
 }
 
 .text-cyan-900 {
-  color: var(--cyan-900);
+  color: var(--cyan-900) !important;
 }
 
 .bg-cyan-900 {
@@ -6923,7 +6920,7 @@ textarea {
 }
 
 .text-sky-50 {
-  color: var(--sky-50);
+  color: var(--sky-50) !important;
 }
 
 .bg-sky-50 {
@@ -6942,7 +6939,7 @@ textarea {
 }
 
 .text-sky-100 {
-  color: var(--sky-100);
+  color: var(--sky-100) !important;
 }
 
 .bg-sky-100 {
@@ -6961,7 +6958,7 @@ textarea {
 }
 
 .text-sky-200 {
-  color: var(--sky-200);
+  color: var(--sky-200) !important;
 }
 
 .bg-sky-200 {
@@ -6980,7 +6977,7 @@ textarea {
 }
 
 .text-sky-300 {
-  color: var(--sky-300);
+  color: var(--sky-300) !important;
 }
 
 .bg-sky-300 {
@@ -6999,7 +6996,7 @@ textarea {
 }
 
 .text-sky-400 {
-  color: var(--sky-400);
+  color: var(--sky-400) !important;
 }
 
 .bg-sky-400 {
@@ -7018,7 +7015,7 @@ textarea {
 }
 
 .text-sky-500 {
-  color: var(--sky-500);
+  color: var(--sky-500) !important;
 }
 
 .bg-sky-500 {
@@ -7037,7 +7034,7 @@ textarea {
 }
 
 .text-sky-600 {
-  color: var(--sky-600);
+  color: var(--sky-600) !important;
 }
 
 .bg-sky-600 {
@@ -7056,7 +7053,7 @@ textarea {
 }
 
 .text-sky-700 {
-  color: var(--sky-700);
+  color: var(--sky-700) !important;
 }
 
 .bg-sky-700 {
@@ -7075,7 +7072,7 @@ textarea {
 }
 
 .text-sky-800 {
-  color: var(--sky-800);
+  color: var(--sky-800) !important;
 }
 
 .bg-sky-800 {
@@ -7094,7 +7091,7 @@ textarea {
 }
 
 .text-sky-900 {
-  color: var(--sky-900);
+  color: var(--sky-900) !important;
 }
 
 .bg-sky-900 {
@@ -7124,7 +7121,7 @@ textarea {
 }
 
 .text-blue-50 {
-  color: var(--blue-50);
+  color: var(--blue-50) !important;
 }
 
 .bg-blue-50 {
@@ -7143,7 +7140,7 @@ textarea {
 }
 
 .text-blue-100 {
-  color: var(--blue-100);
+  color: var(--blue-100) !important;
 }
 
 .bg-blue-100 {
@@ -7162,7 +7159,7 @@ textarea {
 }
 
 .text-blue-200 {
-  color: var(--blue-200);
+  color: var(--blue-200) !important;
 }
 
 .bg-blue-200 {
@@ -7181,7 +7178,7 @@ textarea {
 }
 
 .text-blue-300 {
-  color: var(--blue-300);
+  color: var(--blue-300) !important;
 }
 
 .bg-blue-300 {
@@ -7200,7 +7197,7 @@ textarea {
 }
 
 .text-blue-400 {
-  color: var(--blue-400);
+  color: var(--blue-400) !important;
 }
 
 .bg-blue-400 {
@@ -7219,7 +7216,7 @@ textarea {
 }
 
 .text-blue-500 {
-  color: var(--blue-500);
+  color: var(--blue-500) !important;
 }
 
 .bg-blue-500 {
@@ -7238,7 +7235,7 @@ textarea {
 }
 
 .text-blue-600 {
-  color: var(--blue-600);
+  color: var(--blue-600) !important;
 }
 
 .bg-blue-600 {
@@ -7257,7 +7254,7 @@ textarea {
 }
 
 .text-blue-700 {
-  color: var(--blue-700);
+  color: var(--blue-700) !important;
 }
 
 .bg-blue-700 {
@@ -7276,7 +7273,7 @@ textarea {
 }
 
 .text-blue-800 {
-  color: var(--blue-800);
+  color: var(--blue-800) !important;
 }
 
 .bg-blue-800 {
@@ -7295,7 +7292,7 @@ textarea {
 }
 
 .text-blue-900 {
-  color: var(--blue-900);
+  color: var(--blue-900) !important;
 }
 
 .bg-blue-900 {
@@ -7325,7 +7322,7 @@ textarea {
 }
 
 .text-indigo-50 {
-  color: var(--indigo-50);
+  color: var(--indigo-50) !important;
 }
 
 .bg-indigo-50 {
@@ -7344,7 +7341,7 @@ textarea {
 }
 
 .text-indigo-100 {
-  color: var(--indigo-100);
+  color: var(--indigo-100) !important;
 }
 
 .bg-indigo-100 {
@@ -7363,7 +7360,7 @@ textarea {
 }
 
 .text-indigo-200 {
-  color: var(--indigo-200);
+  color: var(--indigo-200) !important;
 }
 
 .bg-indigo-200 {
@@ -7382,7 +7379,7 @@ textarea {
 }
 
 .text-indigo-300 {
-  color: var(--indigo-300);
+  color: var(--indigo-300) !important;
 }
 
 .bg-indigo-300 {
@@ -7401,7 +7398,7 @@ textarea {
 }
 
 .text-indigo-400 {
-  color: var(--indigo-400);
+  color: var(--indigo-400) !important;
 }
 
 .bg-indigo-400 {
@@ -7420,7 +7417,7 @@ textarea {
 }
 
 .text-indigo-500 {
-  color: var(--indigo-500);
+  color: var(--indigo-500) !important;
 }
 
 .bg-indigo-500 {
@@ -7439,7 +7436,7 @@ textarea {
 }
 
 .text-indigo-600 {
-  color: var(--indigo-600);
+  color: var(--indigo-600) !important;
 }
 
 .bg-indigo-600 {
@@ -7458,7 +7455,7 @@ textarea {
 }
 
 .text-indigo-700 {
-  color: var(--indigo-700);
+  color: var(--indigo-700) !important;
 }
 
 .bg-indigo-700 {
@@ -7477,7 +7474,7 @@ textarea {
 }
 
 .text-indigo-800 {
-  color: var(--indigo-800);
+  color: var(--indigo-800) !important;
 }
 
 .bg-indigo-800 {
@@ -7496,7 +7493,7 @@ textarea {
 }
 
 .text-indigo-900 {
-  color: var(--indigo-900);
+  color: var(--indigo-900) !important;
 }
 
 .bg-indigo-900 {
@@ -7526,7 +7523,7 @@ textarea {
 }
 
 .text-violet-50 {
-  color: var(--violet-50);
+  color: var(--violet-50) !important;
 }
 
 .bg-violet-50 {
@@ -7545,7 +7542,7 @@ textarea {
 }
 
 .text-violet-100 {
-  color: var(--violet-100);
+  color: var(--violet-100) !important;
 }
 
 .bg-violet-100 {
@@ -7564,7 +7561,7 @@ textarea {
 }
 
 .text-violet-200 {
-  color: var(--violet-200);
+  color: var(--violet-200) !important;
 }
 
 .bg-violet-200 {
@@ -7583,7 +7580,7 @@ textarea {
 }
 
 .text-violet-300 {
-  color: var(--violet-300);
+  color: var(--violet-300) !important;
 }
 
 .bg-violet-300 {
@@ -7602,7 +7599,7 @@ textarea {
 }
 
 .text-violet-400 {
-  color: var(--violet-400);
+  color: var(--violet-400) !important;
 }
 
 .bg-violet-400 {
@@ -7621,7 +7618,7 @@ textarea {
 }
 
 .text-violet-500 {
-  color: var(--violet-500);
+  color: var(--violet-500) !important;
 }
 
 .bg-violet-500 {
@@ -7640,7 +7637,7 @@ textarea {
 }
 
 .text-violet-600 {
-  color: var(--violet-600);
+  color: var(--violet-600) !important;
 }
 
 .bg-violet-600 {
@@ -7659,7 +7656,7 @@ textarea {
 }
 
 .text-violet-700 {
-  color: var(--violet-700);
+  color: var(--violet-700) !important;
 }
 
 .bg-violet-700 {
@@ -7678,7 +7675,7 @@ textarea {
 }
 
 .text-violet-800 {
-  color: var(--violet-800);
+  color: var(--violet-800) !important;
 }
 
 .bg-violet-800 {
@@ -7697,7 +7694,7 @@ textarea {
 }
 
 .text-violet-900 {
-  color: var(--violet-900);
+  color: var(--violet-900) !important;
 }
 
 .bg-violet-900 {
@@ -7727,7 +7724,7 @@ textarea {
 }
 
 .text-purple-50 {
-  color: var(--purple-50);
+  color: var(--purple-50) !important;
 }
 
 .bg-purple-50 {
@@ -7746,7 +7743,7 @@ textarea {
 }
 
 .text-purple-100 {
-  color: var(--purple-100);
+  color: var(--purple-100) !important;
 }
 
 .bg-purple-100 {
@@ -7765,7 +7762,7 @@ textarea {
 }
 
 .text-purple-200 {
-  color: var(--purple-200);
+  color: var(--purple-200) !important;
 }
 
 .bg-purple-200 {
@@ -7784,7 +7781,7 @@ textarea {
 }
 
 .text-purple-300 {
-  color: var(--purple-300);
+  color: var(--purple-300) !important;
 }
 
 .bg-purple-300 {
@@ -7803,7 +7800,7 @@ textarea {
 }
 
 .text-purple-400 {
-  color: var(--purple-400);
+  color: var(--purple-400) !important;
 }
 
 .bg-purple-400 {
@@ -7822,7 +7819,7 @@ textarea {
 }
 
 .text-purple-500 {
-  color: var(--purple-500);
+  color: var(--purple-500) !important;
 }
 
 .bg-purple-500 {
@@ -7841,7 +7838,7 @@ textarea {
 }
 
 .text-purple-600 {
-  color: var(--purple-600);
+  color: var(--purple-600) !important;
 }
 
 .bg-purple-600 {
@@ -7860,7 +7857,7 @@ textarea {
 }
 
 .text-purple-700 {
-  color: var(--purple-700);
+  color: var(--purple-700) !important;
 }
 
 .bg-purple-700 {
@@ -7879,7 +7876,7 @@ textarea {
 }
 
 .text-purple-800 {
-  color: var(--purple-800);
+  color: var(--purple-800) !important;
 }
 
 .bg-purple-800 {
@@ -7898,7 +7895,7 @@ textarea {
 }
 
 .text-purple-900 {
-  color: var(--purple-900);
+  color: var(--purple-900) !important;
 }
 
 .bg-purple-900 {
@@ -7928,7 +7925,7 @@ textarea {
 }
 
 .text-fuchsia-50 {
-  color: var(--fuchsia-50);
+  color: var(--fuchsia-50) !important;
 }
 
 .bg-fuchsia-50 {
@@ -7947,7 +7944,7 @@ textarea {
 }
 
 .text-fuchsia-100 {
-  color: var(--fuchsia-100);
+  color: var(--fuchsia-100) !important;
 }
 
 .bg-fuchsia-100 {
@@ -7966,7 +7963,7 @@ textarea {
 }
 
 .text-fuchsia-200 {
-  color: var(--fuchsia-200);
+  color: var(--fuchsia-200) !important;
 }
 
 .bg-fuchsia-200 {
@@ -7985,7 +7982,7 @@ textarea {
 }
 
 .text-fuchsia-300 {
-  color: var(--fuchsia-300);
+  color: var(--fuchsia-300) !important;
 }
 
 .bg-fuchsia-300 {
@@ -8004,7 +8001,7 @@ textarea {
 }
 
 .text-fuchsia-400 {
-  color: var(--fuchsia-400);
+  color: var(--fuchsia-400) !important;
 }
 
 .bg-fuchsia-400 {
@@ -8023,7 +8020,7 @@ textarea {
 }
 
 .text-fuchsia-500 {
-  color: var(--fuchsia-500);
+  color: var(--fuchsia-500) !important;
 }
 
 .bg-fuchsia-500 {
@@ -8042,7 +8039,7 @@ textarea {
 }
 
 .text-fuchsia-600 {
-  color: var(--fuchsia-600);
+  color: var(--fuchsia-600) !important;
 }
 
 .bg-fuchsia-600 {
@@ -8061,7 +8058,7 @@ textarea {
 }
 
 .text-fuchsia-700 {
-  color: var(--fuchsia-700);
+  color: var(--fuchsia-700) !important;
 }
 
 .bg-fuchsia-700 {
@@ -8080,7 +8077,7 @@ textarea {
 }
 
 .text-fuchsia-800 {
-  color: var(--fuchsia-800);
+  color: var(--fuchsia-800) !important;
 }
 
 .bg-fuchsia-800 {
@@ -8099,7 +8096,7 @@ textarea {
 }
 
 .text-fuchsia-900 {
-  color: var(--fuchsia-900);
+  color: var(--fuchsia-900) !important;
 }
 
 .bg-fuchsia-900 {
@@ -8129,7 +8126,7 @@ textarea {
 }
 
 .text-pink-50 {
-  color: var(--pink-50);
+  color: var(--pink-50) !important;
 }
 
 .bg-pink-50 {
@@ -8148,7 +8145,7 @@ textarea {
 }
 
 .text-pink-100 {
-  color: var(--pink-100);
+  color: var(--pink-100) !important;
 }
 
 .bg-pink-100 {
@@ -8167,7 +8164,7 @@ textarea {
 }
 
 .text-pink-200 {
-  color: var(--pink-200);
+  color: var(--pink-200) !important;
 }
 
 .bg-pink-200 {
@@ -8186,7 +8183,7 @@ textarea {
 }
 
 .text-pink-300 {
-  color: var(--pink-300);
+  color: var(--pink-300) !important;
 }
 
 .bg-pink-300 {
@@ -8205,7 +8202,7 @@ textarea {
 }
 
 .text-pink-400 {
-  color: var(--pink-400);
+  color: var(--pink-400) !important;
 }
 
 .bg-pink-400 {
@@ -8224,7 +8221,7 @@ textarea {
 }
 
 .text-pink-500 {
-  color: var(--pink-500);
+  color: var(--pink-500) !important;
 }
 
 .bg-pink-500 {
@@ -8243,7 +8240,7 @@ textarea {
 }
 
 .text-pink-600 {
-  color: var(--pink-600);
+  color: var(--pink-600) !important;
 }
 
 .bg-pink-600 {
@@ -8262,7 +8259,7 @@ textarea {
 }
 
 .text-pink-700 {
-  color: var(--pink-700);
+  color: var(--pink-700) !important;
 }
 
 .bg-pink-700 {
@@ -8281,7 +8278,7 @@ textarea {
 }
 
 .text-pink-800 {
-  color: var(--pink-800);
+  color: var(--pink-800) !important;
 }
 
 .bg-pink-800 {
@@ -8300,7 +8297,7 @@ textarea {
 }
 
 .text-pink-900 {
-  color: var(--pink-900);
+  color: var(--pink-900) !important;
 }
 
 .bg-pink-900 {
@@ -8330,7 +8327,7 @@ textarea {
 }
 
 .text-rose-50 {
-  color: var(--rose-50);
+  color: var(--rose-50) !important;
 }
 
 .bg-rose-50 {
@@ -8349,7 +8346,7 @@ textarea {
 }
 
 .text-rose-100 {
-  color: var(--rose-100);
+  color: var(--rose-100) !important;
 }
 
 .bg-rose-100 {
@@ -8368,7 +8365,7 @@ textarea {
 }
 
 .text-rose-200 {
-  color: var(--rose-200);
+  color: var(--rose-200) !important;
 }
 
 .bg-rose-200 {
@@ -8387,7 +8384,7 @@ textarea {
 }
 
 .text-rose-300 {
-  color: var(--rose-300);
+  color: var(--rose-300) !important;
 }
 
 .bg-rose-300 {
@@ -8406,7 +8403,7 @@ textarea {
 }
 
 .text-rose-400 {
-  color: var(--rose-400);
+  color: var(--rose-400) !important;
 }
 
 .bg-rose-400 {
@@ -8425,7 +8422,7 @@ textarea {
 }
 
 .text-rose-500 {
-  color: var(--rose-500);
+  color: var(--rose-500) !important;
 }
 
 .bg-rose-500 {
@@ -8444,7 +8441,7 @@ textarea {
 }
 
 .text-rose-600 {
-  color: var(--rose-600);
+  color: var(--rose-600) !important;
 }
 
 .bg-rose-600 {
@@ -8463,7 +8460,7 @@ textarea {
 }
 
 .text-rose-700 {
-  color: var(--rose-700);
+  color: var(--rose-700) !important;
 }
 
 .bg-rose-700 {
@@ -8482,7 +8479,7 @@ textarea {
 }
 
 .text-rose-800 {
-  color: var(--rose-800);
+  color: var(--rose-800) !important;
 }
 
 .bg-rose-800 {
@@ -8501,7 +8498,7 @@ textarea {
 }
 
 .text-rose-900 {
-  color: var(--rose-900);
+  color: var(--rose-900) !important;
 }
 
 .bg-rose-900 {
@@ -8513,11 +8510,11 @@ textarea {
 }
 
 .text-white {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .text-black {
-  color: var(--black);
+  color: var(--black) !important;
 }
 
 .bg-black-1 {
@@ -9661,6 +9658,12 @@ textarea {
   height: 100vh;
 }
 
+.app {
+  background: url(../../assets/imgs/background.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
 a {
   text-decoration: none;
 }
@@ -9695,6 +9698,7 @@ a.btn {
 
 .header {
   --height: 60px;
+  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9764,6 +9768,16 @@ a.btn {
   font-size: 50px;
   background: var(--transparent-black-3);
   color: var(--white);
+}
+
+.choose-answer b {
+  text-transform: uppercase;
+}
+.choose-answer span {
+  text-transform: capitalize;
+}
+.choose-answer .card-body {
+  gap: 5rem;
 }
 
 .w-100 {
