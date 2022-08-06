@@ -20,6 +20,7 @@ export const createQuestion = async (data) => {
 };
 
 export const updateQuestion = async (data) => {
+  console.log({ data });
   const questionDoc = doc(db, "questions", data.id);
   const newFields = { ...data };
   await updateDoc(questionDoc, newFields);

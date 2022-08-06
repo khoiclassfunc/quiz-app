@@ -32,8 +32,9 @@
 
   :where(tbody th, tbody td) {
     --tw-bg-opacity: 1;
-    // background-color: var(--gray-100);
     border: 1px solid var(--gray-500);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   &:where(:not(.table-zebra))

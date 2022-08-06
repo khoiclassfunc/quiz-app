@@ -9,7 +9,7 @@ const PlayGame = () => {
   const [chooseSubjects, setChooseSubjects] = useState([]);
   const [numberQuestions, setNumberQuestions] = useState(10);
   const [questions, setQuestions] = useState([]);
-  const [styleAnswerQuestion, setStyleAnswerQuestion] = useState(2);
+  const [styleAnswerQuestion] = useState(2);
 
   const [steps, setSteps] = useState(0);
 

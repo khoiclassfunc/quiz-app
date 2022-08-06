@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { googlePopup, login, register } from "../firebase/auth";
+import { login, register } from "../firebase/auth";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -31,11 +31,11 @@ const Login = () => {
     setLoading(false);
   };
 
-  const handleLoginGoogle = async () => {
-    setLoading(true);
-    await googlePopup();
-    setLoading(false);
-  };
+  // const handleLoginGoogle = async () => {
+  //   setLoading(true);
+  //   await googlePopup();
+  //   setLoading(false);
+  // };
 
   const handleSwitchLogin = (e) => {
     e.preventDefault();
@@ -76,7 +76,7 @@ const Login = () => {
                   </button>
                   <div className="mt-5">
                     Do not have an account?{" "}
-                    <a href="" onClick={handleSwitchLogin}>
+                    <a href="/" onClick={handleSwitchLogin}>
                       Register
                     </a>
                   </div>
@@ -113,7 +113,7 @@ const Login = () => {
                   </button>
                   <div className="mt-5">
                     Do you already have an account?{" "}
-                    <a href="" onClick={handleSwitchLogin}>
+                    <a href="/" onClick={handleSwitchLogin}>
                       Login
                     </a>
                   </div>

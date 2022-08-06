@@ -40,7 +40,7 @@ const FormQuestion = (props) => {
         listAnswer.push(item.text);
       });
       setAnswers(listAnswer);
-      setDescription(itemEdit.description);
+      setDescription(itemEdit?.description || "");
     }
   }, [state?.itemEdit]);
 
@@ -126,9 +126,8 @@ const FormQuestion = (props) => {
               className="textarea mb-8"
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Explain..."
-            >
-              {description}
-            </textarea>
+              value={description}
+            ></textarea>
           </div>
           <div className="col-12 mb-5">
             <div className="form-question__submit">
