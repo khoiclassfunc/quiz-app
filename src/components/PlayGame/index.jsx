@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { getRandomQuestions } from "../../firebase/question";
 import { getSubjects } from "../../firebase/subject";
 import AnswerQuestion from "./AnswerQuestion";
+import AnswerQuestion2 from "./AnswerQuestion2";
 
 const PlayGame = () => {
   const [subjects, setSubjects] = useState([]);
   const [chooseSubjects, setChooseSubjects] = useState([]);
   const [numberQuestions, setNumberQuestions] = useState(10);
   const [questions, setQuestions] = useState([]);
+  const [styleAnswerQuestion, setStyleAnswerQuestion] = useState(2);
 
   const [steps, setSteps] = useState(0);
 
@@ -94,9 +96,12 @@ const PlayGame = () => {
           </div>
         )}
 
-        {steps === 1 && (
-          <AnswerQuestion questions={questions} setSteps={setSteps} />
-        )}
+        {steps === 1 &&
+          (styleAnswerQuestion === 2 ? (
+            <AnswerQuestion2 questions={questions} setSteps={setSteps} />
+          ) : (
+            <AnswerQuestion questions={questions} setSteps={setSteps} />
+          ))}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { checkStt, shuffAnswer } from "../../common";
+import ListQuestion from "./ListQuestion";
 
 const AnswerQuestion = ({ questions, setSteps }) => {
   const navigate = useNavigate();
@@ -67,24 +67,14 @@ const AnswerQuestion = ({ questions, setSteps }) => {
       )}
       {questions.map((item, index) => {
         return (
-          <div className="col-12 mb-8" key={index}>
-            <div className="row">
-              <div className="col-12">
-                <div className="card number-question">
-                  <div className="card-body">
-                    <b>Question {index + 1}:</b> {item.questionText}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <ListAnswer
-              listAnswer={item.answers}
-              setDataAnswer={setDataAnswer}
-              dataAnswer={dataAnswer}
-              stt={index}
-              finished={finished}
-            />
-          </div>
+          <ListQuestion
+            key={index}
+            stt={index + 1}
+            item={item}
+            setDataAnswer={setDataAnswer}
+            finished={finished}
+            dataAnswer={dataAnswer}
+          />
         );
       })}
       {!finished && (
@@ -111,50 +101,6 @@ const AnswerQuestion = ({ questions, setSteps }) => {
           </div>
         </div>
       )}
-    </div>
-  );
-};
-
-const ListAnswer = ({
-  listAnswer,
-  dataAnswer,
-  setDataAnswer,
-  stt,
-  finished,
-}) => {
-  const [chooseAnswer, setChooseAnswer] = useState(false);
-  const [newListAnswer, setNewListAnswer] = useState([]);
-
-  const handleClick = (item, stt, index) => {
-    dataAnswer[stt] = item;
-    setDataAnswer(dataAnswer);
-    setChooseAnswer(index);
-  };
-
-  useEffect(() => {
-    const arr = shuffAnswer(listAnswer);
-    setNewListAnswer(arr);
-  }, [listAnswer]);
-
-  return (
-    <div className="col-12">
-      <div className="row">
-        {newListAnswer.map((it, idx) => (
-          <div className="col-6 mt-8" key={idx}>
-            <div
-              className={`card choose-answer ${
-                chooseAnswer === idx ? "active" : ""
-              } ${finished ? (it.check ? "correct" : "wrong") : ""}`}
-              onClick={() => handleClick(it, stt, idx)}
-            >
-              <div className="card-body">
-                <b>{checkStt(idx)}: </b>
-                <span>{it.text}</span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

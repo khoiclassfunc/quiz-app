@@ -126,8 +126,9 @@ const FormQuestion = (props) => {
               className="textarea mb-8"
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Explain..."
-              value={description}
-            ></textarea>
+            >
+              {description}
+            </textarea>
           </div>
           <div className="col-12 mb-5">
             <div className="form-question__submit">
