@@ -49,3 +49,13 @@ export const randomArray = (numArr, numRan) => {
 
   return newArr.slice(0, numRan);
 };
+
+export const shuffAnswer = (listAnswer) => {
+  const arr = [0, 1, 2, 3];
+  const newArr = arr.sort(() => Math.random() - 0.5);
+  listAnswer.forEach((item, index) => {
+    const idx = newArr.findIndex((item) => item === index);
+    newArr[idx] = { ...item };
+  });
+  return newArr;
+};

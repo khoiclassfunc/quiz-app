@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { checkStt } from "../../common";
+import { checkStt, shuffAnswer } from "../../common";
 
 const AnswerQuestion = ({ questions, setSteps }) => {
   const navigate = useNavigate();
@@ -66,7 +66,6 @@ const AnswerQuestion = ({ questions, setSteps }) => {
         </div>
       )}
       {questions.map((item, index) => {
-        console.log(item);
         return (
           <div className="col-12 mb-8" key={index}>
             <div className="row">
@@ -124,6 +123,7 @@ const ListAnswer = ({
   finished,
 }) => {
   const [chooseAnswer, setChooseAnswer] = useState(false);
+  const [newListAnswer, setNewListAnswer] = useState([]);
 
   const handleClick = (item, stt, index) => {
     dataAnswer[stt] = item;
@@ -131,12 +131,15 @@ const ListAnswer = ({
     setChooseAnswer(index);
   };
 
-  console.log(finished);
+  useEffect(() => {
+    const arr = shuffAnswer(listAnswer);
+    setNewListAnswer(arr);
+  }, [listAnswer]);
 
   return (
     <div className="col-12">
       <div className="row">
-        {listAnswer.map((it, idx) => (
+        {newListAnswer.map((it, idx) => (
           <div className="col-6 mt-8" key={idx}>
             <div
               className={`card choose-answer ${
